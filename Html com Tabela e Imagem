@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html com Tabela e Imagem</title>
+</head>
+
+<body>
+    <H1><strong>KALEO NASCIMENTO</strong></H1>
+    <LI>FILHO</LI>
+    <H1><STRong>TATASHITO</STRong></H1>
+    <LI>PAI</LI>
+    <H3><STRONG>MAMÃE</STRONG></H3>
+    <H2><STRONG>LIKE</STRONG></H2>
+    <LI>CACHORRO</LI>
+    <OL type="A"><strong><i>LISTA DE COMPRAS</i></strong>
+        <LI>ARROZ</LI>
+        <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam sequi quidem accusamus ipsum rerum
+            libero modi dolorum nihil similique quae eum autem, perspiciatis expedita voluptates repudiandae perferendis
+            itaque debitis architecto.</dd>
+        <LI>FEIJÃO</LI>
+        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae iusto porro laboriosam facere mollitia
+            veniam ipsam modi, cum repellendus officia facilis ea perspiciatis iure similique expedita tempore officiis
+            assumenda ipsa?</dd>
+        <LI>MACARRÃO</LI>
+        <dd>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt ut voluptatum, eos perspiciatis assumenda
+            dolor, temporibus eum dignissimos voluptatibus fugit accusantium enim exercitationem ratione voluptates
+            eaque aperiam repudiandae mollitia provident.</dd>
+        <LI>AÇUCAR</LI>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, exercitationem amet. Accusantium illum
+            neque itaque natus sequi fugit cupiditate, quos distinctio quam quis esse nulla veniam delectus
+            exercitationem tempore voluptatibus!</dd>
+    </OL>
+    <ul><strong>DATAS COMEMORATIVAS</strong>
+        <li>Pascoa</li>
+        <li>Natal</li>
+        <li>Carnaval</li>
+        <li>Ano Novo</li>
+    </ul>
+    <TABLE border="2">
+        <THead>
+            <tr>
+                <TH>ID</TH>
+                <TH>NOME</TH>
+                <TH>FUNÇÃO</TH>
+                <TH>ADMISSÃO</TH>
+                <TH>BIOMETRIA</TH>
+            </tr>
+        </THead>
+        <TBOdy>
+
+            <TR>
+                <td>01/2025</td>
+                <td>AFONSO DA LUZ</td>
+                <td>ELERTICISTA</td>
+                <td>13.02.2022</td>
+                <td><img src="" alt=""></td>
+            </TR>
+            <TR>
+                <td>02/2025</td>
+                <td>BRUNO DA COSTA</td>
+                <td>PEDREIRO</td>
+                <td>13.02.2022</td>
+                <td><img src="" alt=""></td>
+            </TR>
+            <TR>
+                <td>03/2025</td>
+                <td>CARLOS DA CRUZ</td>
+                <td>CHEFE DE TURMA</td>
+                <td>13.02.2022</td>
+                <td><img src="" alt=""></td>
+            </TR>
+            <TR>
+                <td>04/2025</td>
+                <td>DANIEL DO MONTE</td>
+                <td>SUPERVISOR</td>
+                <td>13.02.2022</td>
+                <td><img src="" alt=""></td>
+            </TR>
+
+        </TBOdy>
+    </TABLE>
+
+
+</body>
+
+</html>
