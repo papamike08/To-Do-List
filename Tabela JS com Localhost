@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Escala de Serviço</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .filtros,
+        .cadastro,
+        .acoes {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        input,
+        select,
+        button {
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        caption {
+            caption-side: top;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Escala de Serviço</h1>
+
+    <div class="filtros">
+        <input type="text" id="buscaNome" placeholder="Buscar por nome...">
+        <select id="filtroTurno">
+            <option value="todos">Todos os Turnos</option>
+            <option value="Manhã">Manhã</option>
+            <option value="Tarde">Tarde</option>
+            <option value="Noite">Noite</option>
+        </select>
+    </div>
+
+    <div class="cadastro">
+        <input type="text" id="novoNome" placeholder="Nome">
+        <input type="text" id="novaFuncao" placeholder="Função">
+        <input type="text" id="novoPosto" placeholder="Posto">
+        <select id="novoTurno">
+            <option value="">Selecione Turno</option>
+            <option value="Manhã">Manhã</option>
+            <option value="Tarde">Tarde</option>
+            <option value="Noite">Noite</option>
+        </select>
+        <button id="btnAdicionar">Adicionar</button>
+    </div>
+
+    <div class="acoes">
+        <button onclick="window.print()">🖨️ Imprimir em PDF</button>
+    </div>
+
+    <table id="tabela">
+        <caption>Lista de Efetivo</caption>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Função</th>
+                <th>Posto</th>
+                <th>Turno</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dados = [
+                { nome: "João Silva", funcao: "Supervisor", posto: "Alfa", turno: "Manhã" },
+                { nome: "Maria Souza", funcao: "Operadora", posto: "Bravo", turno: "Tarde" },
+                { nome: "Pedro Santos", funcao: "Técnico", posto: "Charlie", turno: "Noite" },
+            ];
+
+            const tabela = document.querySelector("#tabela tbody");
+            const buscaNome = document.getElementById("buscaNome");
+            const filtroTurno = document.getElementById("filtroTurno");
+
+            function renderTabela(filtrados) {
+                tabela.innerHTML = "";
+                filtrados.forEach((pessoa, index) => {
+                    const linha = document.createElement("tr");
+                    linha.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${pessoa.nome}</td>
+            <td>${pessoa.funcao}</td>
+            <td>${pessoa.posto}</td>
+            <td>${pessoa.turno}</td>
+          `;
+                    tabela.appendChild(linha);
+                });
+            }
+
+            function aplicarFiltros() {
+                const textoBusca = buscaNome.value.toLowerCase();
+                const turnoSelecionado = filtroTurno.value;
+
+                const resultado = dados.filter(pessoa => {
+                    const nomeMatch = pessoa.nome.toLowerCase().includes(textoBusca);
+                    const turnoMatch = turnoSelecionado === "todos" || pessoa.turno === turnoSelecionado;
+                    return nomeMatch && turnoMatch;
+                });
+
+                renderTabela(resultado);
+            }
+
+            function adicionarPessoa() {
+                const nome = document.getElementById("novoNome").value.trim();
+                const funcao = document.getElementById("novaFuncao").value.trim();
+                const posto = document.getElementById("novoPosto").value.trim();
+                const turno = document.getElementById("novoTurno").value;
+
+                if (!nome || !funcao || !posto || !turno) {
+                    alert("Preencha todos os campos para adicionar.");
+                    return;
+                }
+
+                dados.push({ nome, funcao, posto, turno });
+
+                document.getElementById("novoNome").value = "";
+                document.getElementById("novaFuncao").value = "";
+                document.getElementById("novoPosto").value = "";
+                document.getElementById("novoTurno").value = "";
+
+                aplicarFiltros();
+            }
+
+            // Eventos
+            buscaNome.addEventListener("input", aplicarFiltros);
+            filtroTurno.addEventListener("change", aplicarFiltros);
+            document.getElementById("btnAdicionar").addEventListener("click", adicionarPessoa);
+
+            // Inicializa tabela
+            renderTabela(dados);
+        });
+    </script>
+    <div class="acoes">
+        <button onclick="exportarExcel()">📥 Exportar para Excel</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script>
+        function exportarExcel() {
+            const tabela = document.getElementById("tabela");
+            const wb = XLSX.utils.table_to_book(tabela, { sheet: "Escala" });
+            XLSX.writeFile(wb, "escala_servico.xlsx");
+        }
+    </script>
+
+
+</body>
+
+</html>
