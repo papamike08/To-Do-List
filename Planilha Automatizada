@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>My Task List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eaa30a;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      width: 250px;
+    }
+
+    button {
+      padding: 8px 12px;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: #fff;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .done {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    .remove-btn {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 4px 8px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📝 Minha Lista de Tarefas</h1>
+
+  <input type="text" id="taskInput" placeholder="Digite uma nova tarefa">
+  <button onclick="addTask()">Adicionar</button>
+
+  <ul id="taskList"></ul>
+
+  <script>
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    function saveTasks() {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
+
+    function renderTasks() {
+      const taskList = document.getElementById("taskList");
+      taskList.innerHTML = "";
+
+      tasks.forEach((task, index) => {
+        const li = document.createElement("li");
+        li.textContent = task.text;
+
+        if (task.done) {
+          li.classList.add("done");
+        }
+
+        li.onclick = () => {
+          tasks[index].done = !tasks[index].done;
+          saveTasks();
+          renderTasks();
+        };
+
+        const removeBtn = document.createElement("button");
+        removeBtn.textContent = "Remover";
+        removeBtn.className = "remove-btn";
+        removeBtn.onclick = (e) => {
+          e.stopPropagation();
+          tasks.splice(index, 1);
+          saveTasks();
+          renderTasks();
+        };
+
+        li.appendChild(removeBtn);
+        taskList.appendChild(li);
+      });
+    }
+
+    function addTask() {
+      const taskInput = document.getElementById("taskInput");
+      const taskText = taskInput.value.trim();
+      if (taskText === "") return;
+
+      tasks.push({ text: taskText, done: false });
+      saveTasks();
+      renderTasks();
+      taskInput.value = "";
+    }
+
+    // Inicializa a lista ao carregar
+    renderTasks();
+  </script>
+<h2>HOTWELLS RIZED</h2>
+<dl><strong>Carrinhos de Brinquedo</strong> </dl>
+<dd>São miniaturas que reproduzem carros reais, podendo ser colecionados por pessoas de varias idades e genero</dd>
+<br>
+<dl><strong>Formula 1</strong></dl>
+<dd>Corrida automotiva realizada por carros fabricados com a finalizade de alto desempenho, porém precisam de pistas
+    niveladas</dd>
+<dl><strong>Nascar</strong></dl>
+<dd>Corrida realizada com carros esportivos que desempenham velocidades em alta performance em tempos ajustados</dd>
+<br>
+<h2><strong>Citzen of Dreams</strong></h2>
+<ul>
+    <li><input type="checkbox">Kabu</li>
+    <li><input type="checkbox">Fortaleza</li>
+    <li><input type="checkbox">Caucaia</li>
+    <li><input type="checkbox">Itaitinga</li>
+    <li><input type="checkbox">Pacajus</li>
+</ul>
+<br>
+<H2>Afazeres Domesticos</H2>
+<ol>
+    <style></style>
+    <li style="color: rgb(255, 38, 0);"><input type="checkbox"> Organizar o quarto</li>
+    <li style="font-weight: bold;"><input type="checkbox">Lavar as loucas da pia</li>
+    <li style="font-family: Arial; font-size: 20px;"><input type="checkbox">Varrer a casa</li>
+    <li
+        style="background-color: lightgray; padding: 10px; font-size: 18px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><input type="checkbox">
+        Fazer as Compras</li>
+    <li><input type="checkbox">Preparar a marenda</li>
+</ol>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>NOME</th>
+        <th>CPF</th>
+        <th>EMAIL</th>
+        <th>SENHA</th>
+        <th>IMAGENS</th>
+    </tr>
+    <tr>
+
+        <td>1</td>
+        <td>André</td>
+        <td>555.222.333-44</td>
+        <td>andre.5234@hotspot.com.br</td>
+        <td>admin12345</td>
+        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOFUPdrCWHzquY9cdr95q-EeMCv2Qe3N4K4A&s"
+                alt="" width="82px" height="82px"></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Breno</td>
+        <td>553.122.633-94</td>
+        <td>breno.3714@hotspot.com.br</td>
+        <td>admin12345</td>
+        <td><img src="https://img.elo7.com.br/product/685x685/32D6954/quadro-decorativo-desenho-anime-dragon-ball-z-quadro-sobre-dragon-ball-z.jpg"
+                alt="" width="82px"></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>augusto</td>
+        <td>515.232.353-44</td>
+        <td>augusto.2453@hotspot.com.br</td>
+        <td>admin12345</td>
+        <td><img src="https://f.i.uol.com.br/fotografia/2013/10/09/325190-970x600-1.jpeg" alt="" width="82px"
+                height="82px"></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Britz</td>
+        <td>574.203.149-74</td>
+        <td>britz.moral@globo.com.br</td>
+        <td>admin@#15761</td>
+        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcwqb178gF9IeLY4KMFX0wWBPTSELEAu0BTA&s"
+                alt="" style="width: 82px; height: 82px;"></td>
+    </tr>
+</table>
+
+
+
+
+</body>
+</html>
