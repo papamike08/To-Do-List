@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação de Input</title>
+</head>
+
+<body>
+    <form>
+        <label for="email">Digite seu Email:</label>
+        <input id="email" type="text" placeholder="digite seu email ou telefone">
+        <input type="button" value="Submit">
+        <label>Aceita os termos de uso?</label>
+    </form>
+    <form>
+        <label for="senha">Digite sua senha:</label>
+        <input id="senha" placeholder="Digite sua senha">
+        <input type="button" value="Submit">
+
+        <label>Manter Conectado?</label>
+        <input type="checkbox">
+        <br>
+
+        <label for="">M</label>
+        <input type="radio">
+        <label for="">F</label>
+        <input type="radio">
+        <br>
+
+        <label for="">Selecione a cor desejada:</label>
+        <input type="color">
+        <br>
+
+        <label for="">Selecione a data:</label>
+        <input type="date">
+        <br>
+
+        <label for="">Selecione o Arquivo:</label>
+        <input type="file" name="" id="">
+        <br>
+
+        <label for="">Digite seu numero:</label>
+        <input type="number" name="" id="">
+        <br>
+        <label for="">Senha:</label>
+        <input type="password" name="" id="">
+        <br>
+        <br>
+
+        <button type="reset">Reset Submit</button>
+
+
+    </form>
+</body>
+
+</html>
