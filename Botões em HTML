@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botoes e Linha HTML</title>
+</head>
+<body>
+    <!-- Alinhando com tabela -->
+<table width="100%">
+    <tr>
+      <td align="left">
+        <button>Esquerda</button>
+      </td>
+      <td align="center">
+        <button>Centro</button>
+      </td>
+      <td align="right">
+        <button>Direita</button>
+      </td>
+    </tr>
+  </table>
+  <hr>
+  <!-- Centralizando com tag <center> -->
+  <center>
+    <button>Centralizado com &lt;center&gt;</button>
+    <button>POsicionado a esquerda &lt;Left&gt;</button>
+  </center>
+  <hr>
+  
+  <!-- Usando espaços forçados -->
+  <button>Botão 1</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Botão 2</button>
+  <hr size="5" color="black" width="100%">
+</body>
+</html>
