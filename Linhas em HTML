@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linhas em HTML</title>
+</head>
+<h1>Sign up</h1>
+<hr size="5" color="black" width="100%">
+
+<body>
+    <table width="100%" border="5" cellspacing="2" cellpadding="0">
+        <tr>
+          <td height="2" bgcolor="blue"></td>
+        </tr>
+      </table>
+      <br>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <!-- Repetindo vários pontinhos -->
+          <td align="center">•</td>
+          <td align="center">•</td>
+          <td align="center">•</td>
+          <td align="center">•</td>
+          <td align="center">•</td>
+          <td align="center">•</td>
+          <td align="center">•</td>
+          <td align="center">•</td>
+          <td align="center">•</td>
+          <td align="center">•</td>
+        </tr>
+      </table>
+      <br>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <!-- Repetindo traço intermitente -->
+          <td bgcolor="black" height="2" width="10%"></td>
+          <td></td>
+          <td bgcolor="black" height="2" width="10%"></td>
+          <td></td>
+          <td bgcolor="black" height="2" width="10%"></td>
+          <td></td>
+          <td bgcolor="black" height="2" width="10%"></td>
+          <td></td>
+          <td bgcolor="black" height="2" width="10%"></td>
+        </tr>
+      </table>
+      <br>
+      <!-- Faixa dupla continua -->
+      <table width="100%" border="0" cellspacing="2" cellpadding="0">
+        <tr>
+          <td height="2" bgcolor="black"></td>
+        </tr>
+        <tr>
+          <td height="2" bgcolor="black"></td>
+        </tr>
+      </table>
+</body>
+
+</html>
