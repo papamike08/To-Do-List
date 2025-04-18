@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alinhamento de Botões Hardcore</title>
+</head>
+<body>
+
+  <h2>🔥 Só HTML (Gambiarra Estilo Velho Oeste)</h2>
+
+  <!-- Alinhamento com TABELA -->
+  <table width="100%">
+    <tr>
+      <td align="left">
+        <button>Esquerda</button>
+      </td>
+      <td align="center">
+        <button>Centro</button>
+      </td>
+      <td align="right">
+        <button>Direita</button>
+      </td>
+    </tr>
+  </table>
+
+  <br>
+
+  <!-- Alinhamento com <center> -->
+  <center>
+    <button>Centralizado com &lt;center&gt;</button>
+  </center>
+
+  <br>
+
+  <!-- Espaçamento com &nbsp; -->
+  <button>Botão 1</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Botão 2</button>
+
+  <hr>
+
+  <h2>✨ Com CSS Inline (Chique, mas ainda na marreta)</h2>
+
+  <!-- Centralizado com margin auto -->
+  <button style="display: block; margin: 0 auto;">Centralizado com CSS Inline</button>
+
+  <br>
+
+  <!-- Flexbox para distribuição -->
+  <div style="display: flex; justify-content: space-between;">
+    <button>Esquerda</button>
+    <button>Centro</button>
+    <button>Direita</button>
+  </div>
+
+  <br>
+
+  <!-- Botão à direita -->
+  <div style="text-align: right;">
+    <button>Botão à Direita</button>
+  </div>
+
+</body>
+</html>
