@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>TaskHouse 16.04</title>
+</head>
+
+<body bgcolor="gainsboro">
+
+    <form action="">
+        <h1><strong>Sign up</strong></h1>
+        <hr size=" 8" color="#74ff73" width="76%" align="left">
+
+        <input type="text" name="" id="" placeholder="First Name" size="50"
+            style="height: 30px;border-radius: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="" id="" placeholder="Last Name" size="50" style="height: 30px;border-radius: 5px">
+        <p>
+            <input type="text" name="" id="" placeholder="User Name" size="110" style="height: 30px;border-radius: 5px">
+        </p>
+        <p>
+            <input type="text" name="" id="" placeholder="Email Address" size="110"
+                style="height: 30px;border-radius: 5px">
+        </p>
+        <input type="text" name="" id="" placeholder="Password" size="50"
+            style="height: 30px;border-radius: 5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="" id="" placeholder="Confirm Password" size="50"
+            style="height: 30px;border-radius: 5px">
+        <p><button style="width: 80px; height: 40px; border-radius: 5px;">I
+                Agree</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By
+            clicing <button style="background-color:blue; color: hsl(0, 0%, 100%);border-radius: 3px">Register</button>,
+            you agree to the
+            <a href="http://www.google.com/">Terms and Conditions</a>
+            <hr size=" 8" color="#74ff73" width="76%" align="left">
+
+
+        <p>&nbsp;&nbsp;&nbsp;
+            <button
+                style="width:350px; height: 45px; background-color:blue; color: white; font-size: x-large;border-radius: 5px;">Register</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <button
+                style="width:350px; height: 45px; background-color:rgb(23, 171, 4); color: white; font-size: x-large;border-radius: 5px;">Sign
+                In</button>
+        </p>
+    </form>
+</body>
+
+</html>
