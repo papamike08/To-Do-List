@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculo</title>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <h1>Michael Jackson</h1>
+            <p><strong>Nascimento:</strong>&nbsp;01/04/1998</p>
+            <p><strong>Email:</strong>&nbsp;jackson.michael@globo.new</p>
+            <p><strong>Telefone:</strong>&nbsp;55 551-227-08</p>
+            <img src="/michael jackson.png" alt="" width="80px" height="auto">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem enim veniam, at itaque quasi quibusdam
+                totam ipsa delectus fugiat odio voluptatum accusantium temporibus omnis in excepturi perspiciatis
+                asperiores suscipit. Asperiores id quis, atque autem velit magni nostrum nihil odit mollitia aperiam
+                recusandae dolores et facere porro voluptatibus eligendi provident perferendis?!
+                <a href="https://www.google.com">leia mais</a>
+            </p>
+            <br>
+            <h2>Sumário</h2>
+            <hr size="2" color="blue">
+            <ul>
+                <li><a href="#Endereço">Endereço</a></li>
+                <li><a href="#Experiência">Experiência</a></li>
+                <li><a href="#Competências">Competências</a></li>
+                <li><a href="#FormaçãoAcadêmica">Formação Acadêmica</a></li>
+            </ul>
+            <h2>
+                <p><a href="" id="Endereço">Endereço</a></p>
+            </h2>
+            <hr size="2" color="blue">
+            <dl>
+                <dt><strong>Rua</strong></dt>
+                <dd>Av. Washington Soares 1010</dd>
+                <dt><strong>Bairro</strong></dt>
+                <dd>Cajazeiras</dd>
+                <dt><strong>Cidade</strong></dt>
+                <dd>Fortaleza</dd>
+            </dl>
+            <br>
+            <a href="Curriculo.html">Topo</a>
+            </ul>
+            <h2>
+                <p><a href="" id="Experiência">Experiência</a></p>
+            </h2>
+            <hr size="2" color="blue">
+            <dl>
+                <dt><strong><a href="">Hollywood</a></strong></dt>
+                <dd>Music experience dacing</dd>
+                <dd>2003 at 2005</dd>
+                <dt><strong><a href="Dallas Tree Tower">Dallas Tree Tower</a></strong></dt>
+                <dd>Bartheiner and Supply</dd>
+                <dd>2008 at 2012</dd>
+            </dl>
+            <br>
+            <a href="Curriculo.html">Topo</a>
+            <h2>
+                <p><a href="" id="Competências">Competências</a></p>
+            </h2>
+            <hr size="2" color="blue">
+            <ul>
+                <li>Sinlgle</li>
+                <li>Bassman</li>
+                <li>Guitarman</li>
+                <li>Keyboard Classic</li>
+            </ul>
+            <a href="Curriculo.html">Topo</a>
+        </ul>
+        <h2>
+            <p><a href="" id="FormaçãoAcadêmica">Formação Acadêmica</a></p>
+        </h2>
+        <hr size="2" color="blue">
+        <dl>
+            <dt><strong><a href="">Havard School Mindset</a></strong></dt>
+            <dd>Bacharel and Phisican Technical</dd>
+            <dd>2000 at 2002</dd>
+            <dt><strong><a href="Big House Swash">Big House Swash Dash</a></strong></dt>
+            <dd>Dash wash ahd cook</dd>
+            <dd>2014 at 2016</dd>
+        </dl>
+        <a href="Curriculo.html">Topo</a>
+        <h2><strong><p>©2025</p></strong></h2>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
